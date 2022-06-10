@@ -101,7 +101,7 @@ export const Web3AuthProvider: FunctionComponent<IWeb3AuthState> = ({ children, 
       try {
         setIsLoading(true);
         // get your client id from https://dashboard.web3auth.io by registering a plug and play application.
-        const clientId = process.env.REACT_APP_CLIENT_ID ||  "BKPxkCtfC9gZ5dj-eg-W6yb5Xfr3XkxHuGZl2o2Bn8gKQ7UYike9Dh6c-_LaXlUN77x0cBoPwcSx-IVm0llVsLA";
+        const clientId = "BFLAyFQ_9DKf77_khVNrCvES4AOjTRzZeJhGQvQ8szdZTvHILjIa1-Q06gtGTBsQAlGQlNNcit1zNRxZ9jc_vJ4";
 
         const web3AuthInstance = new Web3AuthCore({
           chainConfig: currentChainConfig,
@@ -114,9 +114,9 @@ export const Web3AuthProvider: FunctionComponent<IWeb3AuthState> = ({ children, 
           loginConfig: {
             jwt: {
               name: "Custom Auth0 Login",
-              verifier: "passwordless-auth0",
+              verifier: "faba-auth0-test-03",
               typeOfLogin: "jwt",
-              clientId: "PqTu6oE6V3jFSSfdaT4smoXgbOyThsga",
+              clientId: "NqJee7oh1hMzeAfyzXCG4ht1fjAzSfz6",
             },
           },
         }});
@@ -144,8 +144,8 @@ export const Web3AuthProvider: FunctionComponent<IWeb3AuthState> = ({ children, 
         relogin: true,
         loginProvider, 
         extraLoginOptions: {
-          domain: "https://torus-test.auth0.com",
-          verifierIdField: "email",
+          domain: "https://dev-leo-test.us.auth0.com",
+          verifierIdField: "name",
         }
       });
       setWalletProvider(localProvider!);
